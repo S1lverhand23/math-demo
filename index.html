@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Quest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <div class="container">
+
+    <div id="menu-screen" class="screen active">
+      <h1>Math Quest</h1>
+      <p>
+        Изучай математику как игру ⚡<br>
+        Решай примеры, набирай очки и ставь рекорды.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h2>➕ Примеры</h2>
+          <p>Сложение, вычитание, умножение и деление.</p>
+        </div>
+
+        <div class="card">
+          <h2>🔥 Комбо</h2>
+          <p>Серии правильных ответов дают бонусные очки.</p>
+        </div>
+
+        <div class="card">
+          <h2>⏱ Таймер</h2>
+          <p>Правильные ответы добавляют время.</p>
+        </div>
+      </div>
+
+      <div class="time-settings">
+        <label>⏱ Время игры:</label>
+        <input type="number" id="custom-time" value="60" min="0">
+
+        <select id="time-mode">
+          <option value="normal">Обычное</option>
+          <option value="infinite">Бесконечное</option>
+        </select>
+      </div>
+
+      <button onclick="startGame()">Играть</button>
+
+      <div class="best-score">
+        🏆 Лучший результат: <span id="best">0</span>
+      </div>
+    </div>
+
+
+    <div id="game-screen" class="screen">
+
+      <div class="stats">
+        <div class="stat-box">
+          <span>Очки</span>
+          <h2 id="score">0</h2>
+        </div>
+
+        <div class="stat-box">
+          <span>Время</span>
+          <h2 id="time">60</h2>
+        </div>
+
+        <div class="stat-box">
+          <span>Комбо</span>
+          <h2 id="combo">x0</h2>
+        </div>
+      </div>
+
+      <div class="question-box">
+        <p>Реши пример:</p>
+        <h1 id="question">1 + 1</h1>
+
+        <input type="text" id="answer" placeholder="?">
+
+        <button onclick="checkAnswer()">Ответить</button>
+      </div>
+
+      <div class="rules">
+        <h3>💡 Как побеждать?</h3>
+        <ul>
+          <li>Правильный ответ = очки + время</li>
+          <li>Ошибка = минус 5 секунд</li>
+          <li>Комбо 3+ даёт двойные очки</li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div id="end-screen" class="screen">
+      <h1>Игра окончена</h1>
+      <p>Твой результат:</p>
+
+      <div id="final-score">0</div>
+
+      <button onclick="startGame()">Играть снова</button>
+      <button onclick="goMenu()">Меню</button>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
