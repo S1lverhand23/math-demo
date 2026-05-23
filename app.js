@@ -25,7 +25,6 @@ function random(min, max) {
 }
 
 const questionGenerators = [
-  // 1
   () => {
     const x = random(-20, 20);
     const a = random(2, 15);
