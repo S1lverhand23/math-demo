@@ -38,7 +38,6 @@ const questionGenerators = [
     };
   },
 
-  // 2
   () => {
     const a = random(1, 10);
     const b = random(1, 20);
@@ -50,7 +49,6 @@ const questionGenerators = [
     };
   },
 
-  // 3
   () => {
     const base = random(2, 8);
     const power = random(2, 6);
@@ -61,7 +59,6 @@ const questionGenerators = [
     };
   },
 
-  // 4
   () => {
     const percent = random(5, 70);
     const number = random(100, 5000);
@@ -73,7 +70,6 @@ const questionGenerators = [
     };
   },
 
-  // 5
   () => {
     const a = random(2, 15);
     const b = random(2, 5);
@@ -84,7 +80,6 @@ const questionGenerators = [
     };
   },
 
-  // 6
   () => {
     const a = random(3, 20);
 
@@ -94,7 +89,6 @@ const questionGenerators = [
     };
   },
 
-  // 7
   () => {
     const a = random(1, 20);
     const b = random(1, 20);
@@ -105,7 +99,6 @@ const questionGenerators = [
     };
   },
 
-  // 8
   () => {
     const a1 = random(1, 50);
     const d = random(1, 15);
@@ -117,7 +110,6 @@ const questionGenerators = [
     };
   },
 
-  // 9
   () => {
     const b1 = random(1, 10);
     const q = random(2, 5);
@@ -129,7 +121,6 @@ const questionGenerators = [
     };
   },
 
-  // 10
   () => {
     const a = random(-100, 100);
 
@@ -148,7 +139,6 @@ function generateQuestion() {
   correctAnswer = question.answer;
 }
 
-// Генерируем около 1000+ вариаций за счёт случайных чисел
 for (let i = 0; i < 100; i++) {
   questionGenerators.push(...questionGenerators.slice(0, 10));
 }
